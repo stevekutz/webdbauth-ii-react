@@ -4,6 +4,10 @@
   "main": "index.js",
   "author": "stevekutz <stkutz@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "server": "nodemon index.js",
+    "start": "node index.js"
+  },
   "dependencies": {
     "bcrypt": "^3.0.6",
     "connect-session-knex": "^1.4.0",
