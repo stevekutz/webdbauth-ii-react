@@ -37,4 +37,5 @@ server.get('/', (req, res) => {
 })
 
 // export !!!
+// server object assigned to module.exports
 module.exports = server;
