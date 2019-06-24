@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "bcrypt": "^3.0.6",
+    "bcryptjs": "^2.4.3",
     "connect-session-knex": "^1.4.0",
     "cors": "^2.8.5",
     "crypto-extra": "^0.4.0",
@@ -17,6 +18,7 @@
     "express-session": "^1.16.2",
     "helmet": "^3.18.0",
     "knex": "^0.17.6",
+    "knex-cleaner": "^1.1.4",
     "nodemon": "^1.19.1",
     "sqlite3": "^4.0.9"
   }

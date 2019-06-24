@@ -8,7 +8,7 @@ const routeCheck = require('../myMiddleware/restrictedMiddleware');
 // myMiddleware2 has two functions, we access via chaining >> see foods
 const myMiddleware2 = require('../myMiddleware/myMiddleware2');
 
-// GET ALL color items in restricto table
+// GET ALL color items in restricto table ONLY if logged in, route verified
 router.get('/colors',  sessionCheck,  routeCheck, async (req, res) => {
    
     console.log('$$$$$ inside colors, req is ', req.baseUrl);
@@ -25,7 +25,7 @@ router.get('/colors',  sessionCheck,  routeCheck, async (req, res) => {
      }
 });
 
-// GET all food items in restricto table
+// GET all food items in restricto table   LOGIN verified BUT not protected route
 //    router.get('/foods', sessionCheck, async (req, res) => {
 router.get('/foods', myMiddleware2.myLogger2, myMiddleware2.checkSession2, async (req, res) => {
     await Restricted.getFoods()
@@ -35,7 +35,7 @@ router.get('/foods', myMiddleware2.myLogger2, myMiddleware2.checkSession2, async
         .catch(err => res.send(err));
 })
 
-// GET all word items from restricto table
+// GET all word items from restricto table - LOGIN not needed, protected route NOT checked
 router.get('/words', (req, res) => {
     Restricted.getWords()
         .then(words => {

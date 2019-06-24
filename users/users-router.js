@@ -7,8 +7,10 @@ const myLogger2 = require('../myMiddleware/myMiddleware2');
 
 
 
-// Used to test for restricted route middleware check
-// const routeCheck = require('../myMiddleware/restrictedMiddleWare');
+// Used to test for restricted route middleware check       // routeCheck
+ // const routeCheck = require('../myMiddleware/restrictedMiddleware');
+ // router.get('/', myLogger2.myLogger2, routeCheck, restrictedMW, (req, res) => {
+
 
 router.get('/', myLogger2.myLogger2, restrictedMW, (req, res) => {
   Users.find()

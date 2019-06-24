@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const bcrypt = require('bcryptjs');  // MUST ADD THIS !!!
 const Auth = require('./auth-model');
 
 // import middlware
